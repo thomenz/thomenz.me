@@ -4,6 +4,7 @@
   </div>
 </template>
 <style>
+
 ::-webkit-scrollbar {
   width: 10px;
 }
