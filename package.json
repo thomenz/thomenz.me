@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@iconify-json/tabler": "^1.1.104",
+    "@nuxt/image": "npm:@nuxt/image-edge@latest",
     "@nuxt/ui": "^2.12.3"
   }
 }

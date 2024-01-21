@@ -10,7 +10,7 @@
         </NuxtLink>
       </div>
       <div class="flex flex-row w-full justify-center">
-        <img class="hover:scale-110 ease-in-out duration-300" width="400px" src="/office.webp" alt="">
+        <NuxtImg class="hover:scale-110 ease-in-out duration-300" src="/office.webp" alt="AI generated isometric 3d office"/>
       </div>
     </div>
   </div>
