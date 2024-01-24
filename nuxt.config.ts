@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
       ]
     }
-}, nitro: {
-  preset: 'cloudflare_pages'
-},
+  }, nitro: {
+    preset: 'cloudflare_pages'
+  },
 })

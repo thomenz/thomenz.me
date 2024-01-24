@@ -8,7 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div class="bg-gradient-to-l from-neutral-900 to-neutral-950">
     <NuxtPage />
   </div>
 </template>
