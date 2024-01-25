@@ -1,33 +1,12 @@
 <script setup lang="ts">
-
 useSeoMeta({
   title: 'Thiago Menzinger',
   description: "Desenvolvedor web, Técnico em TI, Estudante de Engenharia Mecatrônica, entusiasta da tecnologia e inovação.",
 })
-
 </script>
 
 <template>
-  <div class="bg-gradient-to-l from-neutral-900 to-neutral-950">
+  <div class="bg-gradient-to-l dark:from-neutral-900 from-gray-200 dark:to-neutral-950 to-gray-100">
     <NuxtPage />
   </div>
 </template>
-<style>
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-  background: rgb(27, 27, 27); 
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(45, 45, 45); 
-}
-</style>
