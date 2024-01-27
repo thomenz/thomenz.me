@@ -17,7 +17,7 @@ const btvariant = computed(() => {
         </NuxtLink>
       </div>
       <div class="col-span-1 flex flex-row w-full mb-10 justify-center">
-        <NuxtImg sizes="75vw sm:40vw md:340px " class="hover:scale-110 ease-in-out duration-300" src="/cogs.webp"
+        <NuxtImg fit="cover" width="340" height="299" sizes="75vw sm:40vw md:340px " class="hover:scale-110 ease-in-out duration-300" src="/cogs.webp"
           alt="AI generated isometric 3d office" />
       </div>
     </div>
