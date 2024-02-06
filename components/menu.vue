@@ -16,7 +16,9 @@ const themeIcon = computed(() => {
             <NuxtLink aria-label="Check out more on my Github" to="https://github.com/thomenz" target="_blank">
                 <UButton aria-label="Github" icon="i-tabler-brand-github" variant="link"></UButton>
             </NuxtLink>
-            <UButton disabled aria-label="X" color="gray" icon="i-tabler-brand-x" variant="link"></UButton>
+            <NuxtLink aria-label="I'm also on X!" to="https://twitter.com/MenzingerT" target="_blank">
+            <UButton aria-label="X" color="white" icon="i-tabler-brand-x" variant="link"></UButton>
+            </NuxtLink>
             <UButton @click="toggleColorMode()"  aria-label="Change theme to dark or light" color="gray" :icon="themeIcon" variant="link"></UButton>
         </div>
     </div>
