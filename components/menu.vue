@@ -9,7 +9,7 @@ const themeIcon = computed(() => {
 </script>
 
 <template>
-    <div class="flex flex-row justify-between py-6">
+    <nav class="flex flex-row justify-between py-6">
         <span class="text-xl dark:text-green-400 text-gray-900"> Tho<b>MenZ</b> </span>
         <div>
             <UButton aria-label="Contact button" color="gray" disabled icon="i-tabler-message" variant="link"></UButton>
@@ -17,9 +17,10 @@ const themeIcon = computed(() => {
                 <UButton aria-label="Github" color="gray" icon="i-tabler-brand-github" variant="link"></UButton>
             </NuxtLink>
             <NuxtLink aria-label="I'm also on X!" to="https://twitter.com/MenzingerT" target="_blank">
-            <UButton aria-label="X" color="gray" icon="i-tabler-brand-x" variant="link"></UButton>
+                <UButton aria-label="X" color="gray" icon="i-tabler-brand-x" variant="link"></UButton>
             </NuxtLink>
-            <UButton @click="toggleColorMode()"  aria-label="Change theme to dark or light" color="gray" :icon="themeIcon" variant="link"></UButton>
+            <UButton @click="toggleColorMode()" aria-label="Change theme to dark or light" color="gray" :icon="themeIcon"
+                variant="link"></UButton>
         </div>
-    </div>
+    </nav>
 </template>
