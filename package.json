@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/i18n": "^8.0.0",
+    "@nuxtjs/sitemap": "^5.1.0",
     "nuxt": "^3.9.3",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"

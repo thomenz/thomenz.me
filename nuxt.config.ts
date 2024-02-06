@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxtjs/i18n', "@nuxt/image", "@nuxtjs/color-mode"],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', "@nuxt/image", "@nuxtjs/color-mode", "@nuxtjs/sitemap"],
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
@@ -32,5 +32,9 @@ export default defineNuxtConfig({
     }
   }, nitro: {
     preset: 'cloudflare_pages'
+  },
+  site: {
+    url: 'https://thomenz.me',
+    name: 'Thiago Menzinger',
   },
 })
