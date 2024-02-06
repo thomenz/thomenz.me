@@ -13,5 +13,5 @@ This is just a starting point, but feel free to make it your own as a template!
 * [Nuxt i18n](https://i18n.nuxtjs.org/)
 * [Nuxt Image](https://image.nuxt.com/) ( edge-channel )
 * [Nuxt Color-mode](https://color-mode.nuxtjs.org/)
-* [Nuxt Sitemap](https://color-mode.nuxtjs.org/)
+* [Nuxt Sitemap](https://content.nuxt.com/recipes/sitemap)
 
