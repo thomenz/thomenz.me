@@ -23,8 +23,9 @@ const btvariant = computed(() => {
           alt="AI generated isometric 3d office" />
       </div>
     </main>
-    <footer class="flex justify-end text-sm mb-5 w-full">
-      <span class="text-gray-500">2023 - PRESENT &COPY Thiago Menzinger</span>
+    <footer class="flex justify-end text-sm mb-5 gap-2 w-full">
+      <span class="text-gray-500">2023 - PRESENT &COPY Thiago Menzinger</span> 
+      <span class="dark:text-gray-700 text-gray-400">0.13</span>
     </footer>
   </div>
 </template>
