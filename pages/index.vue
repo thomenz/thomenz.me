@@ -10,7 +10,7 @@ const btvariant = computed(() => {
     <Menu />
     <main class="grid sm:grid-cols-2 grid-cols-1 gap-7 items-center">
       <article class="col-span-1 flex flex-col md:mx-2 lg:mx-10 sm:p-0 gap-3">
-        <header>
+        <header class="flex flex-col gap-4">
           <h1 class="text-5xl sm:text-6xl font-bold">{{ $t('welcome') }}</h1>
           <p class="text-xl">{{ $t('description') }}</p>
         </header>

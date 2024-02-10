@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Thiago Menzinger',
-  description: "Desenvolvedor web, Técnico em TI, Estudante de Engenharia Mecatrônica, entusiasta da tecnologia e inovação.",
+  description: "Desenvolvedor Web, Técnico de TI, Estudante de Engenharia Mecatrônica, entusiasta da tecnologia e inovação.",
 })
 </script>
 
