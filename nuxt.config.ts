@@ -13,7 +13,10 @@ export default defineNuxtConfig({
         iso: 'pt-BR'
       },
     ],
-    baseUrl: 'https://thomenz.me'
+    baseUrl: 'https://thomenz.me',
+    detectBrowserLanguage: {
+      useCookie: false,
+    }
   },
   devtools: { enabled: true },
   ui: {
