@@ -37,6 +37,11 @@ const habilidades = [
     value: 60,
   },
   {
+    name: 'Vite',
+    icon: 'i-skill-icons-vite-dark',
+    value: 40,
+  },
+  {
     name: 'Node.js',
     icon: 'i-skill-icons-nodejs-dark',
     value: 50,
@@ -90,6 +95,21 @@ const habilidades = [
     name: 'Windows',
     icon: 'i-skill-icons-windows-dark',
     value: 70,
+  },
+  {
+    name: 'C++',
+    icon: 'i-skill-icons-cpp',
+    value: 30,
+  },
+  {
+    name: 'C#',
+    icon: 'i-skill-icons-cs',
+    value: 40,
+  },
+  {
+    name: 'Java',
+    icon: 'i-skill-icons-java-dark',
+    value: 25,
   }
 ]
 
@@ -148,7 +168,7 @@ setTimeout(() => {
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
             <div v-for=" habilidade in habilidades" :key="habilidade.name"
-              class="col-span-1 hover:scale-125 hover:ml-4 transition-all ease-in-out duration-300 flex flex-row items-center space-x-3">
+              class="col-span-1 md:hover:scale-125 hover:scale-100 md:hover:ml-4 transition-all ease-in-out duration-300 flex flex-row items-center space-x-3">
               <UIcon class="text-4xl" :name="habilidade.icon" />
               <div class="flex flex-col -mt-1 min-w-20 space-y-1">
                 <p class="text-sm">{{ habilidade.name }}</p>
