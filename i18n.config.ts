@@ -3,14 +3,20 @@ export default defineI18nConfig(() => ({
     locale: 'en',
     messages: {
       en: {
-        welcome: "Hello! I'm Thiago Menzinger",
-        description: "This site is under construction: one gear at a time, I'm building a haven for my mechatronic musings and digital daydreams. Brace yourself for an engineer's student playground of projects, code, and creative chaos. Stay tuned, and let's connect on Github!",
+        welcome: "Hello! I'm \n Thiago Menzinger",
+        formation: "IT Technician",
+        superior: "Mechatronics Engineering Student",
+        skills:"Skills & Experience",
         meta :"Web Developer | IT Technician | Mechatronics Engineering Student | Technology and innovation enthusiast",
+        soon: "Soon"
       },
       pt: {
-        welcome: "Olá! Eu sou Thiago Menzinger",
-        description: "Uma engrenagem de cada vez, estou construindo um refúgio para minhas divagações mecatrônicas e devaneios digitais. Prepare-se para um playground de projetos de um estudante de Engenharia Mecatrônica e Técnico em TI, repleto de código e caos criativo. Fique ligado e vamos nos conectar no Github!",
+        welcome: "Olá! Eu sou \n Thiago Menzinger",
+        formation: "Técnico em Informática",
+        superior: "Estudante de Engenharia Mecatrônica",
+        skills:"Habilidades & Experiência",
         meta: "Desenvolvedor Web | Técnico de TI | Estudante de Engenharia Mecatrônica | Entusiasta da tecnologia e inovação",
+        soon: "Em Breve"
       }
     }
   }))

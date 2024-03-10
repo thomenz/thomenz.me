@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   ui: {
-    icons: ['tabler']
+    icons: ['tabler', 'skill-icons']
   },
   app: {
     head: {
