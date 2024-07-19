@@ -34,8 +34,8 @@ const theming = computed(() => {
                 <UButton aria-label="Github" size="lg" color="gray" icon="i-tabler-brand-github" variant="link">
                 </UButton>
             </NuxtLink>
-            <NuxtLink aria-label="My X account" to="https://twitter.com/MenzingerT" target="_blank">
-                <UButton aria-label="X" size="lg" color="gray" icon="i-tabler-brand-x" variant="link"></UButton>
+            <NuxtLink aria-label="My LinkedIn account" to="https://br.linkedin.com/in/thiago-menzinger-5029a42b9" target="_blank">
+                <UButton aria-label="LinkedIn" size="lg" color="gray" icon="i-tabler-brand-linkedin" variant="link"></UButton>
             </NuxtLink>
             <UButton @click="toggleColorMode()" size="lg" aria-label="Change theme to dark or light" color="gray"
                 :icon="theming.icon" variant="link"></UButton>

@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/i18n', "@nuxt/image", "@nuxtjs/color-mode", "@nuxtjs/sitemap"],
+
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
@@ -18,10 +19,13 @@ export default defineNuxtConfig({
       useCookie: false,
     }
   },
+
   devtools: { enabled: true },
+
   ui: {
-    icons: ['tabler', 'skill-icons']
+    icons: ['tabler', 'skill-icons', 'devicon']
   },
+
   app: {
     head: {
       title: 'Thiago Menzinger',
@@ -33,11 +37,16 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
       ]
     }
-  }, nitro: {
-    preset: 'cloudflare_pages'
   },
+
+  nitro: {
+      preset: 'cloudflare_pages'
+    },
+
   site: {
     url: 'https://thomenz.me',
     name: 'Thiago Menzinger',
   },
+
+  compatibilityDate: '2024-07-19',
 })
