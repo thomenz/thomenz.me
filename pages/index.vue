@@ -116,7 +116,7 @@ const habilidades = [
             <h2 class="text-lg"> {{ $t('superior') }}</h2>
           </div>
           <div class="flex flex-col dark:text-gray-300">
-            <NuxtLink aria-label="IBM AI Developer Badge" to="https://www.credly.com/badges/f6cd1e12-98fa-4d83-874a-2046ec7cfe69/public_url" target="_blank">
+            <NuxtLink aria-label="IBM AI Developer Badge" to="https://coursera.org/share/94195a7fe464aa58cf1e8d89689dc0fa" target="_blank">
             <div class="flex flex-row space-x-2 items-center">
               <h2 class="text-lg underline underline-offset-4"> {{ $t('certificate') }}</h2>
             <UIcon class="text-xl" name="i-tabler-external-link" />
