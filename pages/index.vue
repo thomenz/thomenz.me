@@ -22,7 +22,7 @@ const habilidades = [
     icon: 'i-skill-icons-python-dark',
     value: 40,
   },
-  
+
   {
     name: 'C#',
     icon: 'i-skill-icons-cs',
@@ -99,31 +99,47 @@ const habilidades = [
 
 <template>
   <div class="flex flex-col min-h-[calc(100vh)] px-7 m-auto max-w-[1280px]">
+    <div class="absolute top-3 lg:-top-12 lg:-left-7 lg:w-96 lg:h-96 -left-2 rounded-full w-40 h-40 bg-sky-500 blur-3xl opacity-25 lg:opacity-10 -z-1"></div>
     <Menu />
-    <main class="grid grid-cols-1 gap-10">
-      <section class="flex flex-col mt-10 col-span-1 space-y-7">
-        <div class="relative">
-          <h1 class="text-4xl whitespace-pre-line leading-tight md:text-3xl lg:text-5xl font-semibold">{{ $t('welcome')
+    <main class="grid grid-cols-1 gap-7">
+      <section class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="flex space-y-5 col-span-1 flex-col">
+          <div class="relative">
+            <h1 class="text-4xl whitespace-pre-line leading-tight md:text-3xl lg:text-5xl font-semibold">{{
+              $t('welcome')
             }}</h1>
-        </div>
-        <div class="flex w-full space-y-1 rounded-lg flex-col">
-          <div class="flex flex-row gap-3 items-center">
-            <div class="flex flex-col text-lg dark:text-gray-200">
-              <h2> {{ $t('formation') }}</h2>
+          </div>
+          <div class="flex flex-col space-y-1">
+            <div class="flex flex-row gap-3 items-center">
+              <div class="flex flex-col text-lg dark:text-gray-200">
+                <h2> {{ $t('formation') }}</h2>
+              </div>
+            </div>
+            <div class="flex flex-col dark:text-gray-300">
+              <h2 class="text-lg"> {{ $t('superior') }}</h2>
+            </div>
+            <div class="flex flex-col dark:text-gray-300">
+              <NuxtLink aria-label="IBM AI Developer Badge"
+                to="https://coursera.org/share/94195a7fe464aa58cf1e8d89689dc0fa" target="_blank">
+                <h2 class="text-lg underline underline-offset-4"> {{ $t('certificate') }}</h2>
+              </NuxtLink>
             </div>
           </div>
-          <div class="flex flex-col dark:text-gray-300">
-            <h2 class="text-lg"> {{ $t('superior') }}</h2>
+        </div>
+        <div v-if="false" class="flex flex-col col-span-1">
+          <div class="flex flex-col w-full grow">
           </div>
-          <div class="flex flex-col dark:text-gray-300">
-            <NuxtLink aria-label="IBM AI Developer Badge" to="https://coursera.org/share/94195a7fe464aa58cf1e8d89689dc0fa" target="_blank">
-            <div class="flex flex-row space-x-2 items-center">
-              <h2 class="text-lg underline underline-offset-4"> {{ $t('certificate') }}</h2>
-            <UIcon class="text-xl" name="i-tabler-external-link" />
-            </div>
-          </NuxtLink>
+          <div>
+            <UInput :padded="false" placeholder="Conversar..." variant="none"
+              class="w-full border-b-2 py-3 border-gray-500 dark:border-gray-800">
+              <template #trailing>
+                <UButton :padded="false" color="gray" variant="link" icon="i-tabler-send-2"></UButton>
+              </template>
+            </UInput>
           </div>
         </div>
+      </section>
+      <section class="flex flex-col mt-3 col-span-1 space-y-7">
         <UDivider />
         <div>
           <h2 class="font-semibold text-xl mb-3"> {{ $t('skills') }}</h2>
