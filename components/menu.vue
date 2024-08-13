@@ -25,7 +25,7 @@ const theming = computed(() => {
             <UButton aria-label="Logo" size="lg" class="p-0" variant="link">
                 <NuxtImg fit="cover" width="35" height="35"
                     :class="[theming.logoClass, 'hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
-                    src="/favicon.svg" alt="thomenz logo" />
+                    src="/logoicon.svg" alt="thomenz logo" />
             </UButton>
         </NuxtLink>
         <div class="flex flex-row space-y-2 items-center">
