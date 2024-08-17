@@ -98,7 +98,10 @@ const habilidades = [
 <template>
   <div class="flex flex-col min-h-[calc(100vh)] px-7 m-auto max-w-[1280px]">
     <div class="absolute top-3 lg:-top-12 lg:-left-7 lg:w-96 lg:h-96 -left-2 rounded-full w-40 h-40 bg-sky-500 blur-3xl opacity-25 lg:opacity-10 -z-1"></div>
+    <Head>
+      <meta name="facebook-domain-verification" content="6nztvvmk30mhzwk1gtx5tgo6z9opfn" />
     <Menu />
+    </Head>
     <main class="grid grid-cols-1 gap-7">
       <section class="grid grid-cols-1 lg:grid-cols-2">
         <div class="flex space-y-5 col-span-1 flex-col">
