@@ -3,8 +3,11 @@ const { t } = useI18n()
 useSeoMeta({
   title: 'Thiago Menzinger',
   description: t('meta'),
-  name: 'facebook-domain-verification', 
-  content:'6nztvvmk30mhzwk1gtx5tgo6z9opfn",
+})
+  useHead({
+  meta: [
+    { name: 'facebook-domain-verification', content: '6nztvvmk30mhzwk1gtx5tgo6z9opfn' }
+  ],
 })
 
 const habilidades = [
