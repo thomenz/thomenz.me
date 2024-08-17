@@ -6,7 +6,7 @@ useSeoMeta({
 })
   useHead({
   meta: [
-    { name: 'facebook-domain-verification', content: '6nztvvmk30mhzwk1gtx5tgo6z9opfn' }
+    { name: 'facebook-domain-verification', content: '1fhni8a7u3algp44if6zmh5p4x2aqd' }
   ]
 })
   
