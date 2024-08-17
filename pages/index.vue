@@ -1,15 +1,18 @@
 <script setup lang=ts>
 const { t } = useI18n()
-
 useSeoMeta({
   title: 'Thiago Menzinger',
   description: t('meta'),
+},
+{
+  name: 'facebook-domain-verification', 
+  content:'6nztvvmk30mhzwk1gtx5tgo6z9opfn"
 })
 
 const habilidades = [
   {
     name: 'JavaScript',
-    icon: 'i-skill-icons-javascript',
+    icon: 'i-skill-icons-javascript',https://www.facebook.com/login.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Fsettings%2Fdeveloper%2Findie-verification%2F
     value: 60,
   },
   {
