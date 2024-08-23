@@ -1,20 +1,22 @@
 <script lang="ts" setup>
 import premio from '/premio.webp'
 import cynthya from '/cynthya.webp'
+import ogimage from '/ogimage.jpg'
 import { useRobotsRule } from '#imports'
 
 const rule = useRobotsRule()
 rule.value = 'noindex, nofollow'
+const isOpen = ref(false)
 
 useSeoMeta({
   title: 'Rifa da Cynthya',
-  description: "Participe e concorra a um kit da Natura!"
+  ogTitle: 'Rifa da Cynthya',
+  description: 'É só abrir o link e escolher os números que deseja comprar. Cada número custa R$ 10,00 e você pode comprar quantos quiser!',
+  ogDescription: 'É só abrir o link e escolher os números que deseja comprar. Cada número custa R$ 10,00 e você pode comprar quantos quiser!',
+  ogImage: ogimage,
 })
 
 const notAvailableNumbers = ref<any>([])
-const availableNumbers = computed(() => {
-  return Array.from({ length: 300 }, (_, i) => i + 1).filter((n) => !notAvailableNumbers.value.includes(n))
-})
 
 const getAvailableNumbers = async () => {
   const response = await fetch('https://meta-ai-worker.thiagomenzinger.workers.dev/rifas',)
@@ -28,7 +30,7 @@ const selected = ref<number[]>([])
 
 const sendWhatsappMessage = () => {
   const numbers = selected.value.join(', ')
-  const message = `Olá, gostaria de comprar os números ${numbers} da sua rifa Cynthya!`
+  const message = `Olá, gostaria de comprar o(s) número(s) ${numbers} da sua rifa Cynthya!`
   window.open(`https://api.whatsapp.com/send?phone=556784132198&text=${message}`)
 }
 
@@ -41,7 +43,11 @@ const selectNumber = (n: number) => {
 }
 
 const isSelected = (n: number) => {
-  return selected.value.includes(n) ? 'ring-4 ring-pink-500 ring-inset' : ''
+  return selected.value.includes(n) ? 'ring-4 ring-blue-300 ring-inset' : ''
+}
+
+const checkIfNumberisAvailable = (n: number) => {
+  return notAvailableNumbers.value.includes(n) ? true : false
 }
 
 const value = computed(() => {
@@ -66,9 +72,11 @@ const value = computed(() => {
       <p>Clique nos números para selecionar!</p>
     </div>
     <div class="grid grid-cols-5 md:grid-cols-8 lg:grid-cols-12 gap-4 mt-3 p-4 mb-16">
-      <div v-for="n in availableNumbers" class="flex flex-row items-center">
-        <div @click="selectNumber(n)"
-          :class="[isSelected(n), 'flex flex-col text-white font-bold ml-2 bg-pink-300 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2']">
+      <div v-for="n in 300" class="flex flex-row items-center">
+        <div v-if="checkIfNumberisAvailable(n)" 
+          class="flex flex-col text-white font-bold ml-2 bg-pink-300 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2">
+          {{ n }}</div>
+          <div v-else @click="selectNumber(n)" :class="[isSelected(n), 'flex flex-col text-white font-bold ml-2 bg-pink-500 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2']">
           {{ n }}</div>
       </div>
       <p class="col-span-5 text-black ml-2 mt-2 text-justify"><b>SORTEIO: </b>30 de Setembro de 2024 ou imediatamente ao
@@ -76,14 +84,23 @@ const value = computed(() => {
     </div>
     <div class="fixed bottom-0 backdrop-blur-sm bg-white/30 h-20 text-black left-0 right-0">
       <div class="flex flex-row items-center justify-around mt-4 px-4">
-        <div class="text-4xl text-gray-700 font-bold">
+        <div class="text-2xl text-gray-700 font-bold">
           {{ value + `,00` }} R$
         </div>
         <div>
-          <UButton :disabled="selected.length >= 1 ? false : true" @click="sendWhatsappMessage()" size="xl" color="pink">
+          <UButton :disabled="selected.length >= 1 ? false : true" @click="isOpen = !isOpen" size="xl" color="pink">
             Quero esses! </UButton>
         </div>
       </div>
     </div>
+    <UModal v-model="isOpen">
+      <div class="p-5 flex flex-col space-y-6 text-xl">
+        <h2>Você pode copiar minha chave PIX, pagar e me enviar quais números comprou, ou me chamar direto no WhatsApp, obrigada!</h2>
+        <div class="flex flex-col space-y-3">
+        <UButton icon="i-heroicons-clipboard-document" color="sky" size="xl" @click="useCopyToClipboard()"> Copiar chave PIX (67984132198)</UButton>
+        <UButton icon="i-heroicons-chat-bubble-bottom-center-text" size="xl" @click="sendWhatsappMessage()"> Falar pelo WhatsApp</UButton>
+        </div>
+      </div>
+    </UModal>
   </div>
 </template>
