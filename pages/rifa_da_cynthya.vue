@@ -19,8 +19,7 @@ const availableNumbers = computed(() => {
 const getAvailableNumbers = async () => {
   const response = await fetch('https://meta-ai-worker.thiagomenzinger.workers.dev/rifas',)
   const data = await response.json()
-  // for each entry in data that contains numeros: "1,2,3,4,5" split it and map to a number array
-  notAvailableNumbers.value = data.map((entry: { numeros: string }) => entry.numeros.split(',').map(Number)).flat()
+  notAvailableNumbers.value = data.map((entry: { numbers: string }) => entry.numbers.split(',').map(Number)).flat()
 }
 
 await getAvailableNumbers()
