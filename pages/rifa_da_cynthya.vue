@@ -58,8 +58,10 @@ const value = computed(() => {
 <template>
   <div class="relative p-3 bg-gradient-to-br from-pink-50 to-pink-100">
     <NuxtRouteAnnouncer />
-    <img :src="cynthya" alt="Rifa da Cynthya" width="300" class="ml-5">
+    <div class="flex flex-col items-center pt-4 justify-center">   
+    <img :src="cynthya" alt="Rifa da Cynthya" width="300">
     <img :src="premio" alt="Premios" width="400" class="brightness-105">
+    </div>
     <div class="flex justify-center">
       <ul class="list-disc text-xs text-black">
         <li>Kit Natura Meu Primeiro Humor.</li>
@@ -67,14 +69,15 @@ const value = computed(() => {
         <li>Sabonetes em barra Tododia, uma caixa com 5 unidades.</li>
       </ul>
     </div>
-    <div class="flex text-black font-bold flex-col p-4">
+    <div class="flex text-black justify-center items-center mt-4 font-semibold flex-col p-4">
       <p>Valor R$ 10,00</p>
       <p>Clique nos números para selecionar!</p>
+      <p>Os números mais claros já foram vendidos!</p>
     </div>
-    <div class="grid grid-cols-5 md:grid-cols-8 lg:grid-cols-12 gap-4 mt-3 p-4 mb-16">
+    <div class="grid grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-4 mt-3 p-4 lg:px-32 mb-16">
       <div v-for="n in 300" class="flex flex-row items-center">
         <div v-if="checkIfNumberisAvailable(n)" 
-          class="flex flex-col text-white font-bold ml-2 bg-pink-300 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2">
+          class="flex flex-col text-white font-bold ml-2 bg-pink-200 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2">
           {{ n }}</div>
           <div v-else @click="selectNumber(n)" :class="[isSelected(n), 'flex flex-col text-white font-bold ml-2 bg-pink-500 w-11 h-11 text-center justify-center text-bold rounded-full p-1 px-2']">
           {{ n }}</div>
@@ -83,7 +86,7 @@ const value = computed(() => {
         acabarem os números!</p>
     </div>
     <div class="fixed bottom-0 backdrop-blur-sm bg-white/30 h-20 text-black left-0 right-0">
-      <div class="flex flex-row items-center justify-around mt-4 px-4">
+      <div class="flex flex-row items-center justify-around lg:justify-end lg:space-x-10 mt-4 px-4">
         <div class="text-2xl text-gray-700 font-bold">
           {{ value + `,00` }} R$
         </div>
