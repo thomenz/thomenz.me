@@ -53,6 +53,18 @@ const checkIfNumberisAvailable = (n: number) => {
 const value = computed(() => {
   return selected.value.reduce((acc, n) => acc + 10, 0)
 })
+
+const toast = useToast()
+
+const useCopyToClipboard = () => {
+  navigator.clipboard.writeText('67984132198')
+  toast.add({
+    title: 'Chave PIX copiada!',
+    description: 'Agora é só colar no seu aplicativo de pagamento e me enviar os números que comprou!',
+    timeout: 5000,
+    color: 'blue',
+  })
+}
 </script>
 
 <template>
@@ -92,7 +104,7 @@ const value = computed(() => {
         </div>
         <div>
           <UButton :disabled="selected.length >= 1 ? false : true" @click="isOpen = !isOpen" size="xl" color="pink">
-            Quero esses! </UButton>
+           Confirmar! </UButton>
         </div>
       </div>
     </div>
@@ -101,7 +113,7 @@ const value = computed(() => {
         <h2>Você pode copiar minha chave PIX, pagar e me enviar quais números comprou, ou me chamar direto no WhatsApp, obrigada!</h2>
         <div class="flex flex-col space-y-3">
         <UButton icon="i-heroicons-clipboard-document" color="sky" size="xl" @click="useCopyToClipboard()"> Copiar chave PIX (67984132198)</UButton>
-        <UButton icon="i-heroicons-chat-bubble-bottom-center-text" size="xl" @click="sendWhatsappMessage()"> Falar pelo WhatsApp</UButton>
+        <UButton icon="i-tabler-brand-whatsapp" size="xl" @click="sendWhatsappMessage()"> Falar pelo WhatsApp</UButton>
         </div>
       </div>
     </UModal>

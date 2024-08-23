@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   ui: {
-    icons: ['tabler', 'skill-icons', 'devicon']
+    icons: ['tabler', 'skill-icons', 'devicon'],
   },
 
   app: {
