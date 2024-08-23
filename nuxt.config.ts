@@ -1,6 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxtjs/i18n', "@nuxt/image", "@nuxtjs/color-mode", "@nuxtjs/sitemap"],
+  modules: [
+    '@nuxt/ui',
+    '@nuxtjs/i18n',
+    "@nuxt/image",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots"
+  ],
+
+  runtimeConfig: {
+    public: {
+      mpPublicKey: process.env.MP_PUBLIC_KEY,
+      mpAccessToken: process.env.MP_ACCESS_TOKEN,
+    }
+  },
 
   i18n: {
     vueI18n: './i18n.config.ts',
