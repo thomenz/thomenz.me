@@ -8,7 +8,7 @@ rule.value = 'noindex, nofollow'
 
 useSeoMeta({
   title: 'Rifa da Cynthya',
-  description: "Rifa da Cynthya",
+  description: "Participe e concorra a um kit da Natura!"
 })
 
 const notAvailableNumbers = ref<any>([])
@@ -27,8 +27,8 @@ await getAvailableNumbers()
 const selected = ref<number[]>([])
 
 const sendWhatsappMessage = () => {
-  const numbers = selected.value.join(',')
-  const message = `Olá, gostaria de comprar os números ${numbers} da rifa da Cynthya!`
+  const numbers = selected.value.join(', ')
+  const message = `Olá, gostaria de comprar os números ${numbers} da sua rifa Cynthya!`
   window.open(`https://api.whatsapp.com/send?phone=556784132198&text=${message}`)
 }
 
