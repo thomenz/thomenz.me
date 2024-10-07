@@ -92,21 +92,33 @@ const habilidades = [
     icon: 'i-skill-icons-windows-dark',
     value: 70,
   },
+  {
+    name: 'Google ADs',
+    icon: 'i-logos-google-ads',
+    value: 30,
+  },
+  {
+    name: 'Google Analytics 4',
+    icon: 'i-logos-google-analytics',
+    value: 30,
+  },
 ]
 
 </script>
 
 <template>
   <div class="flex flex-col min-h-[calc(100vh)] px-7 m-auto max-w-[1280px]">
-    <div class="absolute top-3 lg:-top-12 lg:-left-7 lg:w-96 lg:h-96 -left-2 rounded-full w-40 h-40 bg-sky-500 blur-3xl opacity-25 lg:opacity-10 -z-1"></div>
+    <div
+      class="absolute top-3 lg:-top-12 lg:-left-7 lg:w-96 lg:h-96 -left-2 rounded-full w-40 h-40 bg-sky-500 blur-3xl opacity-25 lg:opacity-10 -z-1">
+    </div>
     <Menu />
     <main class="grid grid-cols-1 gap-7">
       <section class="grid grid-cols-1 lg:grid-cols-2">
         <div class="flex space-y-5 col-span-1 flex-col">
-          <div class="relative">
+          <div class="relative py-7">
             <h1 class="text-4xl whitespace-pre-line leading-tight md:text-3xl lg:text-5xl font-semibold">{{
               $t('welcome')
-            }}</h1>
+              }}</h1>
           </div>
           <div class="flex flex-col space-y-1">
             <div class="flex flex-row gap-3 items-center">
@@ -123,18 +135,9 @@ const habilidades = [
                 <h2 class="text-lg underline underline-offset-4"> {{ $t('certificate') }}</h2>
               </NuxtLink>
             </div>
-          </div>
-        </div>
-        <div v-if="false" class="flex flex-col col-span-1">
-          <div class="flex flex-col w-full grow">
-          </div>
-          <div>
-            <UInput :padded="false" placeholder="Conversar..." variant="none"
-              class="w-full border-b-2 py-3 border-gray-500 dark:border-gray-800">
-              <template #trailing>
-                <UButton :padded="false" color="gray" variant="link" icon="i-tabler-send-2"></UButton>
-              </template>
-            </UInput>
+            <div class="flex flex-col dark:text-white font-semibold pt-5">
+              <h2 class="text-2xl"> {{ $t('description') }}</h2>
+            </div>
           </div>
         </div>
       </section>
@@ -158,7 +161,7 @@ const habilidades = [
         </div>
       </section>
     </main>
-    <footer class="flex justify-end text-sm mb-3 mt-10 gap-2 w-full">
+    <footer class="flex justify-end text-sm mb-7 mt-10 gap-2 w-full">
       <span class="text-gray-500">2023 - PRESENT &COPY Thiago Menzinger</span>
     </footer>
   </div>

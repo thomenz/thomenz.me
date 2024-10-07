@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-   sodipodi:docname="favicon.svg"
+   sodipodi:docname="logoicon.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -46,5 +46,5 @@
      inkscape:groupmode="layer"
      id="layer1"><path
        id="rect2"
-       style="fill:#f9f9f9;stroke-width:0.477012;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="fill:#1a1a1a;stroke-width:0.477012;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        d="M 0.91016351,0.49315386 V 2.1589162 H 3.4004492 V 7.9735128 H 5.0665978 V 2.1589162 H 7.5565031 V 0.49315386 Z M 6.7232392,2.9895238 A 0.83295857,0.8329515 0 0 0 5.8903548,3.8224055 0.83295857,0.8329515 0 0 0 6.7232392,4.655669 0.83295857,0.8329515 0 0 0 7.5565031,3.8224055 0.83295857,0.8329515 0 0 0 6.7232392,2.9895238 Z M 0.91016351,3.0123382 V 4.6781087 H 2.5763126 V 3.012338 Z M 5.8903548,5.4908389 v 2.460235 H 7.5565031 V 5.4908389 Z M 0.91016351,5.5132711 V 7.9735128 H 2.5763126 V 5.5132711 Z" /></g></svg>

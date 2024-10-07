@@ -9,13 +9,6 @@ export default defineNuxtConfig({
     "@nuxtjs/robots"
   ],
 
-  runtimeConfig: {
-    public: {
-      mpPublicKey: process.env.MP_PUBLIC_KEY,
-      mpAccessToken: process.env.MP_ACCESS_TOKEN,
-    }
-  },
-
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
@@ -36,10 +29,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  ui: {
-    icons: ['tabler', 'skill-icons', 'devicon'],
-  },
-
   app: {
     head: {
       title: 'Thiago Menzinger',
@@ -48,7 +37,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width,initial-scale=1' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/logoicon.svg' }
+        { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' }
       ]
     }
   },

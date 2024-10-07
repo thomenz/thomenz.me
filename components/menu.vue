@@ -13,19 +13,19 @@ const toggleColorMode = () => {
 }
 const theming = computed(() => {
     let icon, logoClass;
-    colorMode.value === 'light' ? (icon = 'i-tabler-sun', logoClass = 'invert') : (icon = 'i-tabler-moon', logoClass = '')
+    colorMode.value === 'light' ? (icon = 'i-tabler-sun', logoClass = '') : (icon = 'i-tabler-moon', logoClass = 'invert')
     return { icon, logoClass }
 })
 
 </script>
 
 <template>
-    <nav class="flex flex-row py-2  items-center justify-between">
-        <NuxtLink aria-label="To homepage" :to="'/' + locale">
-            <UButton aria-label="Logo" size="lg" class="p-0" variant="link">
+    <nav class="flex flex-row py-2 items-center justify-between">
+        <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer">
+            <UButton aria-label="Logo" size="lg" class="p-0 mt-1" variant="link">
                 <NuxtImg fit="cover" width="35" height="35"
                     :class="[theming.logoClass, 'hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
-                    src="/logoicon.svg" alt="thomenz logo" />
+                    src="/logo.svg" alt="Thiago Menzinger Logo" />
             </UButton>
         </NuxtLink>
         <div class="flex flex-row space-y-2 items-center">
