@@ -1,14 +1,15 @@
 <script lang="ts" setup>
 import type { ButtonVariant } from '#ui/types'
 
+// The colorMode Function is getting called late on Safari and te colorMode is not being updated on the first render
 const colorMode = useColorMode()
 
 const { locale } = useI18n()
 
 const theming = computed(() => {
-  let icon:string, logoClass:string, btnVar:ButtonVariant;
-  colorMode.value === 'light' ? (icon = 'i-tabler-sun', logoClass = '', btnVar = 'solid') : (icon = 'i-tabler-moon', logoClass = 'invert', btnVar = 'soft')
-  return { icon, logoClass, btnVar }
+  let icon:string, btnVar:ButtonVariant;
+  colorMode.value === 'light' ? (icon = 'i-tabler-sun', btnVar = 'soft') : (icon = 'i-tabler-moon', btnVar = 'soft')
+  return { icon, btnVar }
 })
 
 const diffs = ['Google My Business otimizado e gerenciado profissionalmente.', 'Sites personalizados desenvolvidos do zero com foco em conversão.', 'Campanhas estratégicas no Google Ads para máximo retorno.', 'Análise avançada com integração de GTAG e métricas em tempo real.', 'Gestão completa da sua presença digital com resultados mensuráveis.']
@@ -47,7 +48,7 @@ const items = [{
       <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer flex flex-row items-center gap-2">
         <UButton aria-label="Logo" class="p-0" variant="link">
           <NuxtImg fit="cover" width="40" height="40"
-            :class="[theming.logoClass, 'hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
+            :class="['dark:invert hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
             src="/itig_logo.svg" alt="Thiago Menzinger Logo" />
         </UButton>
         <div class="flex flex-col justify-center lg:pb-1">
@@ -62,7 +63,7 @@ const items = [{
           </UButton>
         </NuxtLink>
         <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer">
-          <UButton size="xl" aria-label="Change theme to dark or light" color="emerald" :variant="theming.btnVar" class="w-14 h-14">
+          <UButton size="xl" aria-label="Change theme to dark or light" color="emerald" variant="solid" class="w-14 h-14">
             <UIcon name="i-tabler-brand-whatsapp" class="w-8 h-8"></UIcon>
           </UButton>
         </NuxtLink>

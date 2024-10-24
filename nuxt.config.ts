@@ -9,6 +9,11 @@ export default defineNuxtConfig({
     "@nuxtjs/robots"
   ],
 
+  colorMode: {
+    preference: 'system', 
+    fallback: 'light',
+  },
+
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
