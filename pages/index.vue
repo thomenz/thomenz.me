@@ -1,106 +1,134 @@
 <script setup lang=ts>
+
+interface Habilidades {
+  name: string
+  icon: string
+  value: number
+  tipo: string
+}
+
 const { t } = useI18n()
+
 useSeoMeta({
   title: 'Thiago Menzinger',
   description: t('meta'),
 })
 
-const habilidades = [
+const habilidades: Habilidades[] = [
   {
     name: 'JavaScript',
     icon: 'i-skill-icons-javascript',
     value: 60,
+    tipo: 'Linguagens',
   },
   {
     name: 'TypeScript',
     icon: 'i-skill-icons-typescript',
     value: 40,
+    tipo: 'Linguagens',
   },
   {
     name: 'Python',
     icon: 'i-skill-icons-python-dark',
     value: 40,
+    tipo: 'Linguagens',
   },
 
   {
     name: 'C#',
     icon: 'i-skill-icons-cs',
     value: 40,
+    tipo: 'Linguagens',
   },
   {
     name: 'Vue.js 3',
     icon: 'i-skill-icons-vuejs-dark',
     value: 60,
+    tipo: 'Frameworks',
   },
   {
     name: 'Nuxt.js',
     icon: 'i-skill-icons-nuxtjs-dark',
     value: 60,
+    tipo: 'Frameworks',
   },
   {
     name: 'Node.js',
     icon: 'i-skill-icons-nodejs-dark',
     value: 50,
+    tipo: 'Runtime',
   },
   {
     name: 'Bun',
     icon: 'i-devicon-bun',
     value: 40,
+    tipo: 'Runtime',
   },
   {
     name: 'Tailwind CSS',
     icon: 'i-skill-icons-tailwindcss-dark',
     value: 60,
+    tipo: 'Frameworks',
   },
   {
     name: 'GitHub',
     icon: 'i-skill-icons-github-dark',
     value: 50,
+    tipo: 'Ferramentas',
   },
   {
     name: 'Inkscape',
     icon: 'i-devicon-inkscape',
     value: 50,
+    tipo: 'Ferramentas',
   },
   {
     name: 'Blender',
     icon: 'i-skill-icons-blender-dark',
     value: 40,
+    tipo: 'Ferramentas',
   },
   {
     name: 'Cloudflare',
     icon: 'i-skill-icons-cloudflare-dark',
     value: 40,
+    tipo: 'Ferramentas',
   },
   {
     name: 'AppWrite',
     icon: 'i-skill-icons-appwrite',
     value: 40,
+    tipo: 'Banco de Dados',
   },
   {
     name: 'Firebase',
     icon: 'i-devicon-firebase',
     value: 60,
+    tipo: 'Banco de Dados',
   },
   {
     name: 'Linux',
     icon: 'i-skill-icons-linux-dark',
     value: 50,
+    tipo: 'Sistemas Operacionais',
   },
   {
     name: 'Windows',
     icon: 'i-skill-icons-windows-dark',
     value: 70,
+    tipo: 'Sistemas Operacionais',
   },
   {
     name: 'Google ADs',
     icon: 'i-logos-google-ads',
     value: 30,
+    tipo: 'Ferramentas',
   },
   {
     name: 'Google Analytics 4',
     icon: 'i-logos-google-analytics',
     value: 30,
+    tipo: 'Ferramentas',
   },
 ]
 
