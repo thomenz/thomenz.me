@@ -7,39 +7,98 @@ const colorMode = useColorMode()
 const { locale } = useI18n()
 
 const theming = computed(() => {
-  let icon:string, btnVar:ButtonVariant;
+  let icon: string, btnVar: ButtonVariant;
   colorMode.value === 'light' ? (icon = 'i-tabler-sun', btnVar = 'soft') : (icon = 'i-tabler-moon', btnVar = 'soft')
   return { icon, btnVar }
 })
 
-const diffs = ['Google My Business otimizado e gerenciado profissionalmente.', 'Sites personalizados desenvolvidos do zero com foco em conversão.', 'Campanhas estratégicas no Google Ads para máximo retorno.', 'Análise avançada com integração de GTAG e métricas em tempo real.', 'Gestão completa da sua presença digital com resultados mensuráveis.']
+const diffs = ['Google Business Profile com gestão profissional.', 'Sites sob medida com DNA de conversão.', 'Google Ads orientado a performance.', 'Analytics avançado com dados em tempo real.', 'Gestão 360° da sua presença digital.']
 
 const items = [{
-  label: 'Getting Started',
-  icon: 'i-heroicons-information-circle',
+  label: 'Como funciona o tráfego pago?',
   defaultOpen: true,
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  content: 'O tráfego pago é uma estratégia de marketing digital que permite sua empresa aparecer instantaneamente nas primeiras posições do Google e redes sociais. Através de anúncios segmentados, conseguimos direcionar sua mensagem exatamente para quem está procurando seus produtos ou serviços. O melhor? Você só paga quando alguém realmente se interessa e clica no seu anúncio. É como ter uma vitrine premium no maior shopping center digital do mundo!'
 }, {
-  label: 'Installation',
-  icon: 'i-heroicons-arrow-down-tray',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  label: 'Quanto investir por mês em trafego pago?',
+  content: 'O investimento ideal em tráfego pago varia de acordo com seus objetivos e mercado. Para começar, recomendamos um orçamento mínimo de R$ 900 a R$ 3.000 mensais para obter resultados significativos. Porém, o mais importante é ter uma estratégia personalizada que maximize seu retorno sobre investimento. Quer saber qual o melhor investimento para seu negócio? Entre em contato para uma análise gratuita!'
 }, {
-  label: 'Theming',
-  icon: 'i-heroicons-eye-dropper',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  label: 'Como colocar meu negócio no Google?',
+  content: 'Existem várias maneiras de destacar seu negócio no Google: otimização SEO, Google Meu Negócio, Google Ads e marketing de conteúdo. O segredo é combinar essas estratégias de forma inteligente para maximizar sua visibilidade online. Nossa equipe especializada pode criar um plano personalizado para sua empresa dominar os resultados de busca!'
 }, {
-  label: 'Layouts',
-  icon: 'i-heroicons-rectangle-group',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  label: 'Quanto custa o Google Meu Negócio?',
+  content: 'O Google Meu Negócio é gratuito! Porém, para aproveitar todo seu potencial, é necessário otimizar seu perfil, gerenciar avaliações, postar conteúdo regularmente e manter as informações atualizadas. Nossa equipe oferece gestão profissional do seu perfil para garantir máxima visibilidade local e mais clientes.'
 }, {
-  label: 'Components',
-  icon: 'i-heroicons-square-3-stack-3d',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  label: 'Como anunciar no Google Ads?',
+  content: 'Anunciar no Google Ads requer conhecimento técnico para criar campanhas eficientes. O processo envolve pesquisa de palavras-chave, criação de anúncios persuasivos, definição de públicos-alvo e otimização constante. Nossa equipe certificada pelo Google pode cuidar de todo esse processo, garantindo o melhor retorno para seu investimento.'
 }, {
-  label: 'Utilities',
-  icon: 'i-heroicons-wrench-screwdriver',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  label: 'Quanto custa criar um site para minha empresa?',
+  content: 'Boa notícia! O site está incluído em nossos planos completos de marketing digital. Oferecemos soluções que integram design moderno, otimização para buscadores e experiência do usuário. Além do site, você recebe todo o suporte de marketing digital para atrair e converter mais clientes. Solicite uma proposta personalizada!'
+},
+{
+  label: 'Qual o prazo para ver resultados com marketing digital?',
+  content: 'Cada negócio tem seu tempo de maturação, mas nossos clientes costumam ver os primeiros resultados em 30-90 dias. Trabalhamos com metas claras e relatórios transparentes para você acompanhar cada evolução. Quer saber mais sobre nossos casos de sucesso?'
+},
+{
+  label: 'Por que escolher uma agência de marketing digital?',
+  content: 'Marketing digital eficiente exige experiência, ferramentas profissionais e dedicação constante. Nossa agência oferece uma equipe completa de especialistas pelo custo de um único funcionário, além de estratégias testadas e comprovadas em diversos segmentos. Agende uma consulta e descubra como podemos impulsionar seu negócio!'
 }]
+
+const reviews = [{
+  img: '/eumesmo.jpg',
+  name: 'Thiago Menzinger',
+  alt: 'Avaliação de Cliente',
+  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
+  stars: 5
+},
+{
+  img: '/eumesmo.jpg',
+  alt: 'Avaliação de Cliente',
+  name: 'Thiago Menzinger',
+  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
+  stars: 5
+
+}, {
+  img: '/eumesmo.jpg',
+  alt: 'Avaliação de Cliente',
+  name: 'Thiago Menzinger',
+  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
+  stars: 5
+},
+]
+
+const diff = [
+  {
+    icon: 'i-tabler-world-search',
+    content: 'Visibilidade que gera oportunidades reais.'
+  },
+  {
+    icon: 'i-tabler-target-arrow',
+    content: 'Destacamos diferenciais únicos do seu negócio.'
+  },
+  {
+    icon: 'i-tabler-chess',
+    content: 'Estratégia personalizada, alcance exponencial.'
+  },
+  {
+    icon: 'i-hugeicons-artificial-intelligence-04',
+    content: 'Tecnologia a serviço do resultado.'
+  }
+]
+
+const cases = [
+  {
+    site: 'https://drarafaellabarreto.com/',
+    grafico: '/kleber_grafico.webp',
+    img: 'kleber_dentista.webp',
+    alt: 'Imagem do grafico de desempenho do Dr. Kleber Sandim',
+  },
+  {
+    site: 'https://www.drklebersandim.com/',
+    grafico: '/rafaela_grafico.webp',
+    img: 'rafaela_dentista.webp',
+    alt: 'Imagem do grafico de desempenho da Dra. Rafaela Barreto',
+  }
+]
 </script>
 
 <template>
@@ -47,7 +106,7 @@ const items = [{
     <nav class="flex flex-row justify-between p-4 py-5">
       <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer flex flex-row items-center gap-2">
         <UButton aria-label="Logo" class="p-0" variant="link">
-          <NuxtImg fit="cover" width="40" height="40"
+          <NuxtImg fit="cover" width="40" height="40" :placeholder="[40, 40]"
             :class="['dark:invert hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
             src="/itig_logo.svg" alt="Thiago Menzinger Logo" />
         </UButton>
@@ -57,13 +116,14 @@ const items = [{
         </div>
       </NuxtLink>
       <div class="flex flex-row gap-2">
-        <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer">
+        <NuxtLink aria-label="Contato Chatbot IA" :to="'#' + locale" class="cursor-pointer">
           <UButton size="xl" aria-label="Change theme to dark or light" color="white" variant="solid" class="w-14 h-14">
             <UIcon name="i-tabler-message" class="w-8 h-8"></UIcon>
           </UButton>
         </NuxtLink>
-        <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer">
-          <UButton size="xl" aria-label="Change theme to dark or light" color="emerald" variant="solid" class="w-14 h-14">
+        <NuxtLink aria-label="Contato por WhatsApp" :to="'#' + locale" class="cursor-pointer">
+          <UButton size="xl" aria-label="Change theme to dark or light" color="emerald" variant="solid"
+            class="w-14 h-14">
             <UIcon name="i-tabler-brand-whatsapp" class="w-8 h-8"></UIcon>
           </UButton>
         </NuxtLink>
@@ -71,7 +131,6 @@ const items = [{
     </nav>
     <UDivider />
     <div class="grid grid-cols-1 p-4 gap-14">
-
       <div class="relative flex flex-col gap-4 pt-10 pb-5 overflow-hidden">
         <div class="flex flex-row gap-4 items-center justify-between z-10">
           <span class="text-5xl font-semibold tracking-wide"> Alcance </span>
@@ -94,72 +153,57 @@ const items = [{
         <div :style="`background-image: url('/path_to_top.svg')`"
           class="absolute z-0 bg-cover bg-left-top top-0 left-7 opacity-15 dark:opacity-25 w-full h-96"></div>
       </div>
-
       <UCard class="rounded-lg">
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-row items-center gap-2">
-            <span class="w-12 h-12 rounded-full flex flex-col items-center justify-center bg-gray-600">
-              <UIcon name="i-tabler-user" class="w-6 h-6 text-white"></UIcon>
-            </span>
-            <span class="font-semibold">Avaliações de Clientes</span>
+        <UCarousel v-slot="{ item }" :items="reviews" indicators :ui="{
+          item: 'basis-full', indicators: {
+            wrapper: 'relative bottom-0 mt-4'
+          }
+        }" class="w-full rounded-lg overflow-hidden">
+          <div class="flex flex-col space-y-5">
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-row items-center gap-2">
+                <NuxtImg fit="cover" width="40" height="40" class="rounded-full" :placeholder="[40, 40]" :src="item.img"
+                  :alt="item.alt" />
+                <span class="font-semibold">{{ item.name }}</span>
+              </div>
+              <div>
+                {{ item.content }}
+              </div>
+              <div class="flex flex-row gap-1 self-end text-yellow-500">
+                <UIcon v-for="n in item.stars" name="i-tabler-star-filled" class="w-5 h-5"></UIcon>
+              </div>
+            </div>
           </div>
-          <div>
-            "É a melhor equipe nesse campo de atuação. Eu não seu o que faria sem eles. Sempre estão disponíveis para
-            ajudar quando preciso."
-          </div>
-          <div class="flex flex-row gap-1 self-end text-yellow-500">
-            <UIcon v-for="n in 5" name="i-tabler-star-filled" class="w-5 h-5"></UIcon>
-          </div>
-        </div>
+
+        </UCarousel>
       </UCard>
-
       <div class="grid grid-cols-2 gap-6">
-        <UCard class="rounded-lg">
+        <UCard v-for="df in diff" class="rounded-lg">
           <div class="flex flex-col items-center gap-3 justify-center text-center">
             <div class="flex flex-col border-[1px] border-gray-500 rounded-full p-4">
-              <UIcon name="i-tabler-world-search" class="w-10 h-10"></UIcon>
+              <UIcon :name="df.icon" class="w-10 h-10 text-emerald-400"></UIcon>
             </div>
-            <span>Visibilidade que gera oportunidades reais.</span>
-          </div>
-        </UCard>
-        <UCard class="rounded-lg">
-          <div class="flex flex-col items-center gap-3 justify-center text-center">
-            <div class="flex flex-col border-[1px] border-gray-500 rounded-full p-4">
-              <UIcon name="i-tabler-target-arrow" class="w-10 h-10"></UIcon>
-            </div>
-            <span>Destacamos diferenciais únicos do seu negócio.</span>
-          </div>
-        </UCard>
-        <UCard class="rounded-lg">
-          <div class="flex flex-col items-center gap-3 justify-center text-center">
-            <div class="flex flex-col border-[1px] border-gray-500 rounded-full p-4">
-              <UIcon name="i-tabler-chess" class="w-10 h-10"></UIcon>
-            </div>
-            <span>Estratégia personalizada, alcance exponencial.</span>
-          </div>
-        </UCard>
-        <UCard class="rounded-lg">
-          <div class="flex flex-col items-center gap-3 justify-center text-center">
-            <div class="flex flex-col border-[1px] border-gray-500 rounded-full p-4">
-              <UIcon name="i-hugeicons-artificial-intelligence-04" class="w-10 h-10"></UIcon>
-            </div>
-            <span>Tecnologia a serviço do resultado.</span>
+            <span>{{ df.content }}</span>
           </div>
         </UCard>
       </div>
-
-      <div class="relative mb-10">
-        <div class="w-full p-5 rounded-3xl h-[450px] bg-gray-700">
-          Fotos ou vídeos de um case de sucesso
+      <h2 class="font-semibold text-2xl">Da visibilidade ao sucesso: criando oportunidades que convertem.</h2>
+      <UCarousel v-slot="{ item }" :items="cases" indicators :ui="{
+        item: 'basis-full h-[520px]', indicators: {
+          wrapper: 'relative bottom-0 mt-4'
+        }
+      }" class="w-full rounded-lg overflow-hidden">
+        <div class="relative">
+          <NuxtImg fit="cover" width="900" height="1440" class="rounded-xl w-[80%]" :placeholder="[900, 1440]"
+            :src="item.img" :alt="item.alt" />
+          <NuxtImg fit="cover" width="400" height="300"
+            class="absolute mx-auto rounded-xl w-[200px] h-[150px] -bottom-0 right-5" :placeholder="[400, 300]"
+            :src="item.grafico" :alt="item.alt" />
         </div>
-        <div class="absolute mx-auto rounded-xl p-5 w-60 h-32 -bottom-7 right-5 bg-gray-400">
-          Um gráfico ou barras com resultados
-        </div>
-      </div>
-
+      </UCarousel>
       <UCard class="rounded-lg">
         <ul class="flex flex-col gap-4">
-          <h2 class="font-semibold text-2xl mb-5">Presença Digital Completa:</h2>
+          <h2 class="font-semibold text-2xl mb-5">Resultado digital mensurável: do planejamento ao sucesso.</h2>
           <li v-for="d in diffs">
             <div class="flex flex-row gap-2">
               <UIcon name="i-tabler-circle-check-filled" class="w-6 h-6 text-green-400"></UIcon>
@@ -168,12 +212,12 @@ const items = [{
           </li>
         </ul>
       </UCard>
-
       <div class="flex flex-col gap-5">
         <h2 class="text-2xl font-semibold">Perguntas Frequentes:</h2>
-        <UAccordion :items="items" :ui="{ wrapper: 'flex flex-col w-full' }">
+        <UAccordion :items="items"
+          :ui="{ wrapper: 'flex flex-col w-full', item: { size: 'text-md px-3', color: 'text-gray-300' } }">
           <template #default="{ item, index, open }">
-            <UButton color="gray" variant="ghost" class="border-b border-gray-200 dark:border-gray-700"
+            <UButton color="white" variant="ghost" class="border-b border-gray-200 text-md dark:border-gray-700"
               :ui="{ rounded: 'rounded-none', padding: { sm: 'p-3' } }">
               <span class="truncate">{{ index + 1 }}. {{ item.label }}</span>
               <template #trailing>
@@ -183,6 +227,21 @@ const items = [{
             </UButton>
           </template>
         </UAccordion>
+      </div>
+      <div class="flex flex-col w-full items-left gap-5">
+        <h2 class="text-2xl font-semibold">Entre em Contato:</h2>
+        <NuxtLink aria-label="Contato por WhatsApp" :to="'#' + locale" class="cursor-pointer">
+          <UButton size="xl" aria-label="Contato via WhatsApp" color="emerald" variant="solid" class="h-14">
+            <span>Solicitar Proposta Personalizada</span>
+            <UIcon name="i-tabler-brand-whatsapp" class="w-8 h-8"></UIcon>
+          </UButton>
+        </NuxtLink>
+        <NuxtLink aria-label="Contato Online" :to="'#' + locale" class="cursor-pointer">
+          <UButton size="xl" aria-label="Conversa com Chatbot IA" color="sky" variant="solid" class="h-14">
+            <span>Tire Suas Dúvidas 24h</span>
+            <UIcon name="i-tabler-message" class="w-8 h-8"></UIcon>
+          </UButton>
+        </NuxtLink>
       </div>
     </div>
   </div>
