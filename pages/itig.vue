@@ -44,24 +44,10 @@ const items = [{
 }]
 
 const reviews = [{
-  img: '/eumesmo.jpg',
-  name: 'Thiago Menzinger',
-  alt: 'Avaliação de Cliente',
-  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
-  stars: 5
-},
-{
-  img: '/eumesmo.jpg',
-  alt: 'Avaliação de Cliente',
-  name: 'Thiago Menzinger',
-  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
-  stars: 5
-
-}, {
-  img: '/eumesmo.jpg',
-  alt: 'Avaliação de Cliente',
-  name: 'Thiago Menzinger',
-  content: 'É a melhor equipe nesse campo de atuação. Eu não sei o que faria sem eles. Sempre estão disponíveis para ajudar quando preciso.',
+  img: '/thiago_menzinger.jpg',
+  name: 'Reviwer Name',
+  alt: 'image alt',
+  content: 'Review Content',
   stars: 5
 },
 ]
@@ -102,26 +88,26 @@ const cases = [
 </script>
 
 <template>
-  <div class="min-h-[100svh] max-w-7xl mx-auto mb-14">
+  <div class="min-h-[100svh] max-w-7xl mx-auto pb-14">
     <nav class="flex flex-row justify-between p-4 py-5">
-      <NuxtLink aria-label="To homepage" :to="'/' + locale" class="cursor-pointer flex flex-row items-center gap-2">
+      <NuxtLink aria-label="To homepage" :to="'/'+ locale" class="cursor-pointer flex flex-row items-center gap-2">
         <UButton aria-label="Logo" class="p-0" variant="link">
           <NuxtImg fit="cover" width="40" height="40" :placeholder="[40, 40]"
             :class="['dark:invert hover:scale-110 transition-transform ease-in-out delay-100 duration-300']"
-            src="/itig_logo.svg" alt="Thiago Menzinger Logo" />
+            src="/itig_logo.svg" alt="Thiago Menzinger Logo" loading="lazy" />
         </UButton>
         <div class="flex flex-col justify-center lg:pb-1">
-          <h1 class="font-bold text-lg">Leverage</h1>
+          <h1 class="font-bold text-lg">20/80</h1>
           <p class="text-sm"> Marketing e Automação</p>
         </div>
       </NuxtLink>
       <div class="flex flex-row gap-2">
-        <NuxtLink aria-label="Contato Chatbot IA" :to="'#' + locale" class="cursor-pointer">
-          <UButton size="xl" aria-label="Change theme to dark or light" color="white" variant="solid" class="w-14 h-14">
+        <NuxtLink aria-label="Contato Chatbot IA" to="#" class="cursor-pointer">
+          <UButton disabled size="xl" aria-label="Change theme to dark or light" color="white" variant="solid" class="w-14 h-14">
             <UIcon name="i-tabler-message" class="w-8 h-8"></UIcon>
           </UButton>
         </NuxtLink>
-        <NuxtLink aria-label="Contato por WhatsApp" :to="'#' + locale" class="cursor-pointer">
+        <NuxtLink aria-label="Contato por WhatsApp" to="https://wa.me/5567981683825" target="_blank" class="cursor-pointer">
           <UButton size="xl" aria-label="Change theme to dark or light" color="emerald" variant="solid"
             class="w-14 h-14">
             <UIcon name="i-tabler-brand-whatsapp" class="w-8 h-8"></UIcon>
@@ -130,78 +116,82 @@ const cases = [
       </div>
     </nav>
     <UDivider />
-    <div class="grid grid-cols-1 p-4 gap-14">
-      <div class="relative flex flex-col gap-4 pt-10 pb-5 overflow-hidden">
-        <div class="flex flex-row gap-4 items-center justify-between z-10">
-          <span class="text-5xl font-semibold tracking-wide"> Alcance </span>
+    <div class="grid grid-cols-1 lg:grid-cols-5 p-4 gap-14">
+      <div class="lg:col-span-3 gap-5 flex flex-col">
+        <div class="relative flex flex-col pb-10 pt-5 gap-4 overflow-hidden">
+          <div class="flex flex-row gap-4 items-center justify-between z-10">
+            <span class="text-5xl lg:text-7xl font-semibold tracking-wide"> Alcance </span>
+          </div>
+          <div class="flex flex-row gap-2 justify-between z-10">
+            <span class="text-5xl lg:text-7xl font-semibold">Novos</span>
+            <UButton color="emerald" :variant="theming.btnVar" class="px-4 z-10" :ui="{ rounded: 'rounded-xl' }">
+              <UIcon name="i-tabler-map-2" class="w-8 h-8 mr-1"></UIcon>
+              <span class="text-start">
+                Sua marca no mapa <br> é só o começo.
+              </span>
+            </UButton>
+          </div>
+          <div class="flex flex-row gap-2 z-10">
+            <span class="text-5xl lg:text-7xl font-semibold">Horizontes</span>
+          </div>
+          <p class="mt-4 z-10 lg:text-lg">Do pin no mapa ao verdadeiro protagonismo. Mais que uma localização, criamos experiências
+            que conectam sua marca aos clientes. Cada detalhe conta para alcançar novos horizontes e multiplicar
+            resultados.</p>
+          <div :style="`background-image: url('/path_to_top.svg')`"
+            class="absolute z-0 bg-cover bg-left-top lg:left-0 top-0 left-7 opacity-10 dark:opacity-25 w-full h-full"></div>
         </div>
-        <div class="flex flex-row gap-2 justify-between z-10">
-          <span class="text-5xl font-semibold">Novos</span>
-          <UButton color="emerald" :variant="theming.btnVar" class="px-4 z-10" :ui="{ rounded: 'rounded-xl' }">
-            <UIcon name="i-tabler-map-2" class="w-8 h-8 mr-1"></UIcon>
-            <span class="text-start">
-              Sua marca no mapa <br> é só o começo.
-            </span>
-          </UButton>
+        <div class="grid grid-cols-1 lg:grid-cols-7 lg:mt-10 gap-7 lg:gap-4">
+          <UCard class="rounded-lg lg:col-span-3 hidden">
+            <UCarousel v-slot="{ item }" :items="reviews" indicators :ui="{
+              item: 'basis-full', indicators: {
+                wrapper: 'relative bottom-0 mt-4'
+              }
+            }" class="w-full rounded-lg overflow-hidden">
+              <div class="flex flex-col space-y-5">
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-row items-center gap-2">
+                    <NuxtImg fit="cover" width="40" height="40" class="rounded-full" :placeholder="[40, 40]" :src="item.img"
+                      :alt="item.alt" loading="lazy" />
+                    <span class="font-semibold">{{ item.name }}</span>
+                  </div>
+                  <div>
+                    {{ item.content }}
+                  </div>
+                  <div class="flex flex-row gap-1 self-end text-yellow-500">
+                    <UIcon v-for="n in item.stars" name="i-tabler-star-filled" class="w-5 h-5"></UIcon>
+                  </div>
+                </div>
+              </div>
+            </UCarousel>
+          </UCard>
+          <div class="grid grid-cols-2 lg:col-span-7 lg:gap-4 gap-6">
+          <UCard v-for="df in diff" class="rounded-lg">
+            <div class="flex flex-col items-center gap-3 justify-center text-center">
+              <div class="flex flex-col border-[1px] dark:border-gray-500 rounded-full p-4">
+                <UIcon :name="df.icon" class="w-10 h-10 text-emerald-400"></UIcon>
+              </div>
+              <span>{{ df.content }}</span>
+            </div>
+          </UCard>
         </div>
-        <div class="flex flex-row gap-2 z-10">
-          <span class="text-5xl font-semibold">Horizontes</span>
         </div>
-        <p class="mt-4 z-10">Do pin no mapa ao verdadeiro protagonismo. Mais que uma localização, criamos experiências
-          que conectam sua marca aos clientes. Cada detalhe conta para alcançar novos horizontes e multiplicar
-          resultados.</p>
-        <div :style="`background-image: url('/path_to_top.svg')`"
-          class="absolute z-0 bg-cover bg-left-top top-0 left-7 opacity-15 dark:opacity-25 w-full h-96"></div>
       </div>
-      <UCard class="rounded-lg">
-        <UCarousel v-slot="{ item }" :items="reviews" indicators :ui="{
-          item: 'basis-full', indicators: {
+      <div class="lg:col-span-2 dark:lg:bg-gray-900 lg:bg-gray-200 lg:p-5 lg:rounded-xl flex flex-col gap-10">
+        <h2 class="font-semibold text-2xl">Da visibilidade ao sucesso: criando oportunidades que convertem.</h2>
+        <UCarousel v-slot="{ item }" :items="cases" indicators :ui="{
+          item: 'basis-full h-[520px] lg:h-80', indicators: {
             wrapper: 'relative bottom-0 mt-4'
           }
-        }" class="w-full rounded-lg overflow-hidden">
-          <div class="flex flex-col space-y-5">
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-row items-center gap-2">
-                <NuxtImg fit="cover" width="40" height="40" class="rounded-full" :placeholder="[40, 40]" :src="item.img"
-                  :alt="item.alt" />
-                <span class="font-semibold">{{ item.name }}</span>
-              </div>
-              <div>
-                {{ item.content }}
-              </div>
-              <div class="flex flex-row gap-1 self-end text-yellow-500">
-                <UIcon v-for="n in item.stars" name="i-tabler-star-filled" class="w-5 h-5"></UIcon>
-              </div>
-            </div>
+        }" class="w-full rounded-lg h-full overflow-hidden">
+          <div class="relative">
+            <NuxtImg fit="cover" width="900" height="1440" class="rounded-xl shadow-md w-[80%] ml-5 lg:ml-14 lg:w-[42%]" :placeholder="[900, 1440]"
+              :src="item.img" :alt="item.alt" loading="lazy" />
+            <NuxtImg fit="cover" width="400" height="300"
+              class="absolute mx-auto rounded-xl w-[200px] h-[150px] shadow-md -bottom-0 right-5 lg:right-24" :placeholder="[400, 300]"
+              :src="item.grafico" :alt="item.alt" loading="lazy" />
           </div>
-
         </UCarousel>
-      </UCard>
-      <div class="grid grid-cols-2 gap-6">
-        <UCard v-for="df in diff" class="rounded-lg">
-          <div class="flex flex-col items-center gap-3 justify-center text-center">
-            <div class="flex flex-col border-[1px] border-gray-500 rounded-full p-4">
-              <UIcon :name="df.icon" class="w-10 h-10 text-emerald-400"></UIcon>
-            </div>
-            <span>{{ df.content }}</span>
-          </div>
-        </UCard>
-      </div>
-      <h2 class="font-semibold text-2xl">Da visibilidade ao sucesso: criando oportunidades que convertem.</h2>
-      <UCarousel v-slot="{ item }" :items="cases" indicators :ui="{
-        item: 'basis-full h-[520px]', indicators: {
-          wrapper: 'relative bottom-0 mt-4'
-        }
-      }" class="w-full rounded-lg overflow-hidden">
-        <div class="relative">
-          <NuxtImg fit="cover" width="900" height="1440" class="rounded-xl w-[80%]" :placeholder="[900, 1440]"
-            :src="item.img" :alt="item.alt" />
-          <NuxtImg fit="cover" width="400" height="300"
-            class="absolute mx-auto rounded-xl w-[200px] h-[150px] -bottom-0 right-5" :placeholder="[400, 300]"
-            :src="item.grafico" :alt="item.alt" />
-        </div>
-      </UCarousel>
-      <UCard class="rounded-lg">
+        <UCard class="rounded-lg">
         <ul class="flex flex-col gap-4">
           <h2 class="font-semibold text-2xl mb-5">Resultado digital mensurável: do planejamento ao sucesso.</h2>
           <li v-for="d in diffs">
@@ -212,10 +202,11 @@ const cases = [
           </li>
         </ul>
       </UCard>
-      <div class="flex flex-col gap-5">
+      </div>
+      <div class="flex flex-col gap-5 lg:col-span-5">
         <h2 class="text-2xl font-semibold">Perguntas Frequentes:</h2>
         <UAccordion :items="items"
-          :ui="{ wrapper: 'flex flex-col w-full', item: { size: 'text-md px-3', color: 'text-gray-300' } }">
+          :ui="{ wrapper: 'flex flex-col w-full', item: { size: 'text-md px-3', color: 'dark:text-gray-300' } }">
           <template #default="{ item, index, open }">
             <UButton color="white" variant="ghost" class="border-b border-gray-200 text-md dark:border-gray-700"
               :ui="{ rounded: 'rounded-none', padding: { sm: 'p-3' } }">
@@ -228,20 +219,29 @@ const cases = [
           </template>
         </UAccordion>
       </div>
-      <div class="flex flex-col w-full items-left gap-5">
+      <div class="flex flex-col w-full gap-5 lg:gap-7 lg:w-full lg:col-span-5 lg:items-center">
         <h2 class="text-2xl font-semibold">Entre em Contato:</h2>
-        <NuxtLink aria-label="Contato por WhatsApp" :to="'#' + locale" class="cursor-pointer">
-          <UButton size="xl" aria-label="Contato via WhatsApp" color="emerald" variant="solid" class="h-14">
-            <span>Solicitar Proposta Personalizada</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <NuxtLink aria-label="Contato por WhatsApp" to="https://wa.me/5567981683825" target="_blank" class="cursor-pointer">
+          <UButton block size="lg" aria-label="Contato via WhatsApp" color="emerald" variant="solid" class="h-14">
             <UIcon name="i-tabler-brand-whatsapp" class="w-8 h-8"></UIcon>
+            <div class="flex flex-col items-start">
+            <span>Solicite uma Proposta Personalizada</span>
+            <span class="font-normal"> Atendimento WhatsApp</span>
+            </div>
           </UButton>
         </NuxtLink>
-        <NuxtLink aria-label="Contato Online" :to="'#' + locale" class="cursor-pointer">
-          <UButton size="xl" aria-label="Conversa com Chatbot IA" color="sky" variant="solid" class="h-14">
-            <span>Tire Suas Dúvidas 24h</span>
+        <NuxtLink aria-label="Contato Online" to="#" class="cursor-pointer">
+          <UButton block disabled size="lg" aria-label="Conversa com Chatbot IA" color="sky" variant="solid" class="h-14">
             <UIcon name="i-tabler-message" class="w-8 h-8"></UIcon>
+            <div class="flex flex-col items-start">
+            <span>Tire Suas Dúvidas 24 Horas</span>
+            <span class="font-normal"> Agente de Inteligência Artificial</span>
+            </div>
           </UButton>
         </NuxtLink>
+        </div>
+        
       </div>
     </div>
   </div>
