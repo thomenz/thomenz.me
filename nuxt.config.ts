@@ -58,8 +58,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-      preset: 'cloudflare_pages'
+    prerender: {
+      autoSubfolderIndex: false
     },
+    preset: 'cloudflare_pages',
+  },
 
   site: {
     url: 'https://thomenz.me',
