@@ -6,8 +6,13 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap",
-    "@nuxtjs/robots"
+    "@nuxtjs/robots",
+    'nuxt-gtag',
   ],
+
+  gtag: {
+    id: 'G-50LN39EDHW'
+  },
 
   colorMode: {
     preference: 'system', 
