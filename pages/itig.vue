@@ -5,16 +5,11 @@ import type { ButtonVariant } from '#ui/types'
 const colorMode = useColorMode()
 
 const { locale } = useI18n()
-const { initialize } = useGtag()
 
 const theming = computed(() => {
   let icon: string, btnVar: ButtonVariant;
   colorMode.value === 'light' ? (icon = 'i-tabler-sun', btnVar = 'soft') : (icon = 'i-tabler-moon', btnVar = 'soft')
   return { icon, btnVar }
-})
-
-onMounted(() => {
-  initialize();
 })
 
 const diffs = ['Google Business Profile com gestão profissional.', 'Sites sob medida com DNA de conversão.', 'Google Ads orientado a performance.', 'Analytics avançado com dados em tempo real.', 'Gestão 360° da sua presença digital.']

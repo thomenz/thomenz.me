@@ -3,6 +3,7 @@ const colorMode = useColorMode()
 
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const { initialize } = useGtag()
 
 const availableLocales = computed(() => {
     return locales.value.filter(i => i.code !== locale.value)
@@ -16,7 +17,7 @@ const theming = computed(() => {
     colorMode.value === 'light' ? (icon = 'i-tabler-sun', logoClass = '') : (icon = 'i-tabler-moon', logoClass = 'invert')
     return { icon, logoClass }
 })
-
+initialize();
 </script>
 
 <template>
