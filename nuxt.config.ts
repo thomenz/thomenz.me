@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   ],
 
   gtag: {
+    initMode: 'manual',
     id: 'G-50LN39EDHW'
   },
 
