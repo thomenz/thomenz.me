@@ -5,18 +5,18 @@ export default defineI18nConfig(() => ({
       en: {
         welcome: "Hello! I'm \n Thiago Menzinger",
         formation: "💻 IT Technician",
-        superior: "🎓 Mechatronics Engineering Student (Unicesumar)",
+        superior: "⚙️ Mechatronics Engineer",
         certificate: "🤖 IBM® AI Developer Professional Certificate",
-        description: "Creating innovative digital solutions, from development to promotion",
+        description: "Designing and promoting cutting-edge digital solutions.",
         skills:"Skills & Experience",
         meta :"Web/AI Developer | IT Technician | Mechatronics Engineering Student | Technology and Innovation Enthusiast",
       },
       pt: {
         welcome: "Olá! Eu sou \n Thiago Menzinger",
         formation: "💻 Técnico em Informática",
-        superior: "🎓 Engenheiro Mecatrônico em Formação (Unicesumar)",
+        superior: "⚙️ Engenheiro Mecatrônico",
         certificate: "🤖 Desenvolvedor de IA Certificado pela IBM®",
-        description: "Criando soluções digitais inovadoras, desde o desenvolvimento até a promoção.",
+        description: "Criando e promovendo soluções digitais inovadoras.",
         skills:"Habilidades & Experiência",
         meta: "Desenvolvedor Web/IA | Técnico de TI | Engenheiro Mecatrônico em Formação | Entusiasta da Tecnologia e Inovação",
       }
